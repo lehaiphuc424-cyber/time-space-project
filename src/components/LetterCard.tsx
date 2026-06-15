@@ -1,5 +1,5 @@
 
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 import { LetterEntry } from '../data/letters';
 
 interface LetterCardProps {
@@ -8,7 +8,7 @@ interface LetterCardProps {
 }
 
 export default function LetterCard({ letter, index }: LetterCardProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 100, rotateX: 5, scale: 0.98 },
     visible: { 
       opacity: 1, 
@@ -23,7 +23,7 @@ export default function LetterCard({ letter, index }: LetterCardProps) {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
     visible: { 
       opacity: 1, 
@@ -33,7 +33,7 @@ export default function LetterCard({ letter, index }: LetterCardProps) {
     }
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, x: index % 2 === 0 ? 100 : -100, scale: 1.1 },
     visible: { 
       opacity: 1, 

@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 import { LetterEntry } from '../data/letters';
 
 interface DirectoryProps {
@@ -6,7 +6,7 @@ interface DirectoryProps {
 }
 
 export default function Directory({ letters }: DirectoryProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -17,7 +17,7 @@ export default function Directory({ letters }: DirectoryProps) {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: { 
       opacity: 1, 
